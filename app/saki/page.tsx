@@ -1,12 +1,19 @@
-import { Box, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Typography } from "@mui/material";
+import React from "react";
 
 const page = () => {
   return (
     <Box>
-        <Typography 
-        fontSize={"100px"} 
-        color={"pink"} 
+      <Typography
+        //   レスポンシブ対応
+        fontSize={{
+          xs: "10px",
+          md: "30px",
+        }}
+        color={{
+          xs: "red",
+          sm: "pink",
+        }}
         bgcolor={"black"}
         display={"flex"}
         alignItems={"center"}
@@ -15,12 +22,11 @@ const page = () => {
         mt={5}
         p={5}
         // 数字で書くと8倍
-        > 
-        
-            Hello World !
-            </Typography>
+      >
+        Hello World !
+      </Typography>
     </Box>
-  )
-}
+  );
+};
 
-export default page
+export default page;
